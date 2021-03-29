@@ -9,7 +9,6 @@ RUN dotnet publish ./*.csproj -o /publish/
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
 RUN curl -sL https://deb.nodesource.com/setup_10.x |  bash -
 RUN apt-get install -y nodejs
-RUN npm install -g npm
 
 WORKDIR /app
 COPY --from=build /publish .
