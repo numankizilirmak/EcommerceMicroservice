@@ -1,21 +1,22 @@
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build-env
+#See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
+
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-buster-slim AS base
 WORKDIR /app
-# Copy csproj and restore as distinct layers
-COPY *.csproj ./
-RUN dotnet restore
-# Setup NodeJs
-RUN apt-get update && \
-    apt-get install -y wget && \
-    apt-get install -y gnupg2 && \
-    wget -qO- https://deb.nodesource.com/setup_10.x | bash - && \
-    apt-get install -y build-essential nodejs
-# Copy everything else and build
-COPY . ./
-RUN dotnet publish -c Release -o out
-# Build runtime image
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
+EXPOSE 80
+EXPOSE 443
+
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
+WORKDIR /src
+COPY ["src/Presentation/Ecommerce.Web/Ecommerce.Web.csproj", "src/Presentation/Ecommerce.Web/"]
+RUN dotnet restore "src/Presentation/Ecommerce.Web/Ecommerce.Web.csproj"
+COPY . .
+WORKDIR "/src/src/Presentation/Ecommerce.Web"
+RUN dotnet build "Ecommerce.Web.csproj" -c Release -o /app/build
+
+FROM build AS publish
+RUN dotnet publish "Ecommerce.Web.csproj" -c Release -o /app/publish
+
+FROM base AS final
 WORKDIR /app
-COPY --from=build-env /app/out .
-ENV ASPNETCORE_URLS="http://*:3000"
-ENV ASPNETCORE_ENVIRONMENT="Development"
-ENTRYPOINT ["dotnet","Ecommerce.Web.dll"]
+COPY --from=publish /app/publish .
+ENTRYPOINT ["dotnet", "Ecommerce.Web.dll"]
