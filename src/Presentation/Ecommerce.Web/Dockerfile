@@ -1,21 +1,17 @@
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build-env
-
-RUN apt-get update && \
-apt-get install -y wget && \
-apt-get install -y gnupg2 && \
-wget -qO- https://deb.nodesource.com/setup_14.x | bash - && \
-apt-get install -y build-essential nodejs
-
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1 as build
 WORKDIR /app
+RUN curl -sL https://deb.nodesource.com/setup_10.x |  bash -
+RUN apt-get install -y nodejs
 
-COPY *.csproj ./
-RUN dotnet restore
-COPY . ./
-RUN dotnet publish -c Release -o out
-
+COPY /*.csproj ./
+COPY . .
+RUN dotnet publish ./*.csproj -o /publish/
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
+RUN curl -sL https://deb.nodesource.com/setup_10.x |  bash -
+RUN apt-get install -y nodejs
+
 WORKDIR /app
-COPY --from=build-env /app/out .
+COPY --from=build /publish .
 ENV ASPNETCORE_URLS="http://*:3000"
 ENV ASPNETCORE_ENVIRONMENT="Development"
 ENTRYPOINT ["dotnet","Ecommerce.Web.dll"]
