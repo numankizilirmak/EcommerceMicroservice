@@ -1,9 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace EcommerceGitActionTest.Controllers
 {
@@ -22,7 +18,7 @@ namespace EcommerceGitActionTest.Controllers
         [HttpGet]
         public string Get()
         {
-            return "api is working v13";
+            return "api is working v14";
         }
     }
 }
