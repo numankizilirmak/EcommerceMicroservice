@@ -9,12 +9,12 @@ namespace EcommerceGitActionTest.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class WeatherForecastController : ControllerBase
+    public class GitTestController : ControllerBase
     {        
 
-        private readonly ILogger<WeatherForecastController> _logger;
+        private readonly ILogger<GitTestController> _logger;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public GitTestController(ILogger<GitTestController> logger)
         {
             _logger = logger;
         }
