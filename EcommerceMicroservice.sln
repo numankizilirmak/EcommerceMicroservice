@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalog.Api", "src\Catalog\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{FDE0BD13-5539-436B-8C8D-01D6323FF238}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecommerce.Web", "src\Presentation\Ecommerce.Web\Ecommerce.Web.csproj", "{46FFF7D0-84B7-4587-8E7B-8274DE7B6BB9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ecommerce.Web", "src\Presentation\Ecommerce.Web\Ecommerce.Web.csproj", "{46FFF7D0-84B7-4587-8E7B-8274DE7B6BB9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basket", "Basket", "{8958CC32-4E05-449A-A245-B22991493B9B}"
 EndProject
@@ -31,6 +31,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bus", "Bus", "{205B1AB1-085
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ioc", "Ioc", "{D6B06C3A-C274-48A3-B6CC-20910326F382}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcommerceGitActionTest", "EcommerceGitActionTest\EcommerceGitActionTest.csproj", "{53C02D97-904E-4DA2-896B-B5049B78C962}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{46FFF7D0-84B7-4587-8E7B-8274DE7B6BB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{46FFF7D0-84B7-4587-8E7B-8274DE7B6BB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{46FFF7D0-84B7-4587-8E7B-8274DE7B6BB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53C02D97-904E-4DA2-896B-B5049B78C962}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53C02D97-904E-4DA2-896B-B5049B78C962}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53C02D97-904E-4DA2-896B-B5049B78C962}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53C02D97-904E-4DA2-896B-B5049B78C962}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -63,6 +69,7 @@ Global
 		{B864790F-B099-4B5B-B37C-8F1168841C6C} = {F507812D-E0CC-416D-9360-9D4296A13FF0}
 		{205B1AB1-0854-4879-8D57-DB1E86D57FE5} = {0DEC3BCC-49BE-4ED1-9984-00D4B95D64E2}
 		{D6B06C3A-C274-48A3-B6CC-20910326F382} = {0DEC3BCC-49BE-4ED1-9984-00D4B95D64E2}
+		{53C02D97-904E-4DA2-896B-B5049B78C962} = {FDE0BD13-5539-436B-8C8D-01D6323FF238}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {274A4A6D-9FFD-40ED-845D-D03D140B95E0}
