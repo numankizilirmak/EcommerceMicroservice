@@ -1,6 +1,6 @@
 using System;
 
-namespace EcommerceGitActionTest
+namespace TestApi
 {
     public class WeatherForecast
     {
