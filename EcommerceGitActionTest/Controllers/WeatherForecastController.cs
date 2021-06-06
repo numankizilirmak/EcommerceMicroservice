@@ -22,7 +22,7 @@ namespace EcommerceGitActionTest.Controllers
         [HttpGet]
         public string Get()
         {
-            return "api is working v3";
+            return "api is working v4";
         }
     }
 }
