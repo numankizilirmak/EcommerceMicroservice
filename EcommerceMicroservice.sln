@@ -31,6 +31,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ioc", "Ioc", "{D6B06C3A-C27
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApi", "src\Presentation\TestApi\TestApi\TestApi.csproj", "{68141A88-1A35-4076-83D3-033EAC93C0D6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestNew", "src\Presentation\TestNew\TestNew\TestNew.csproj", "{C9B739BF-7B90-4FD0-8CFA-51DB3DCA9F91}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{68141A88-1A35-4076-83D3-033EAC93C0D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68141A88-1A35-4076-83D3-033EAC93C0D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68141A88-1A35-4076-83D3-033EAC93C0D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9B739BF-7B90-4FD0-8CFA-51DB3DCA9F91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9B739BF-7B90-4FD0-8CFA-51DB3DCA9F91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9B739BF-7B90-4FD0-8CFA-51DB3DCA9F91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9B739BF-7B90-4FD0-8CFA-51DB3DCA9F91}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -63,6 +69,7 @@ Global
 		{205B1AB1-0854-4879-8D57-DB1E86D57FE5} = {0DEC3BCC-49BE-4ED1-9984-00D4B95D64E2}
 		{D6B06C3A-C274-48A3-B6CC-20910326F382} = {0DEC3BCC-49BE-4ED1-9984-00D4B95D64E2}
 		{68141A88-1A35-4076-83D3-033EAC93C0D6} = {FDE0BD13-5539-436B-8C8D-01D6323FF238}
+		{C9B739BF-7B90-4FD0-8CFA-51DB3DCA9F91} = {FDE0BD13-5539-436B-8C8D-01D6323FF238}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {274A4A6D-9FFD-40ED-845D-D03D140B95E0}
